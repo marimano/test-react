@@ -9,7 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name][fullhash].js',
     clean: true,
-    //publicPath: '/'
+    publicPath: './'
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -18,11 +18,11 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name][fullhash].css'
     }),
-    /*new CopyPlugin({
+    new CopyPlugin({
       patterns: [
         { from: "static", to: "static" }
       ],
-    }),*/
+    }),
   ],
   devServer: {
     static: {
